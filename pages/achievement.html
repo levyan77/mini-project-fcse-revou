@@ -20,7 +20,60 @@
         </div>
     </nav>
     <div class="container">
-        <h1 style="text-align: center;">Ini Halaman Achievement</h1>
+        <h1 style="text-align: center;">Our Achievements</h1>
+        <section>
+        <div class="row">
+            <div class="column">
+                <h2 
+                style="  text-decoration: underline;
+                -webkit-text-decoration-color: salmon;
+                text-decoration-color: salmon;
+                -webkit-text-decoration-style: wavy;
+                text-decoration-style: wavy;
+                padding-bottom: 10px;">
+                Certifications</h2>
+            <ul>
+                <li onclick="setDivs(1)"><span style="background-color: orange; color: white;">HTML5</span> Certified</li>
+                <li onclick="setDivs(2)"><span style="background-color: lightblue; color: blue;">CSS3</span> Certified</li>
+                <li onclick="setDivs(3)"><span style="background-color: yellow; color: darkgoldenrod;">JavaScript</span> Certified</li>
+                <li onclick="setDivs(4)"><span style="background-color: blue; color: yellow;">Python</span> Certified</li>
+            </ul>
+            </div>
+            <div class="column-gambar1">
+                <img class="image" src="https://cancanit.com/i/open-badges/badge-html5.png" alt="">
+                <img class="image" src="https://cancanit.com/i/open-badges/badge-css3.png" alt="">
+                <img class="image" src="https://cancanit.com/i/open-badges/badge-js.png" alt="">   
+                <img class="image" src="https://cancanit.com/i/open-badges/badge-python.png" alt="">           
+            </div>
+        </div>
+        <hr>
+        </section>
+        <section>
+            <div class="row2">
+                <div class="column-gambar2">
+                    <img class="image-2" src="https://kinsta.com/wp-content/uploads/2020/08/responsive-web-design.jpg" alt="">
+                    <img class="image-2" src="https://user-images.githubusercontent.com/102174805/187029436-ee2149f4-43db-4145-b67d-a16bb4317357.png" alt="">
+                    <img class="image-2" src="https://www.zestminds.com/blog/wp-content/uploads/2021/04/Mobile-App-Development-Process-Banner.jpg" alt="">   
+                    <img class="image-2" src="https://interviewquery-cms-images.s3-us-west-1.amazonaws.com/b7540a72-7d1a-4423-b69d-0e12b4d6e3e3.png" alt="">
+                </div>
+                <div class="column2">
+                    <h2 style="  
+                    -webkit-text-decoration: darkturquoise solid underline;
+                    text-decoration: darkturquoise solid underline;
+                    -webkit-text-decoration-skip: ink;
+                    text-decoration-skip: ink;
+                    padding-bottom: 10px;">
+                    Projects</h2>
+                    <ul>
+                        <li onclick="setDivs2(1)"><span style="background-color:purple ; color: pink;">Responsive</span> <span style="background-color: pink; color: purple;">Web Design</span> Project</li>
+                        <li onclick="setDivs2(2)"><span style="background-color:orangered ; color: white;">E-commerce</span> <span style="background-color: black; color: darkorange;">Website</span> Project</li>
+                        <li onclick="setDivs2(3)"><span style="background-color: darkblue; color: white;">Mobile App Development</span> Project</li>
+                        <li onclick="setDivs2(4)"><span style="background-color: blue; color: orange;">Data</span> <span style="background-color: orange; color: blue;">Analysis</span> Project</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            </section>
     </div>
     <footer>
         <p>Created By Pahlevy</p>
@@ -41,5 +94,49 @@
     document.getElementById("buttonMessageUs").onclick = function () {
         location.href = "messageus.html";
     };
+
+    //fungsi banner background dan navigasinya
+    var slideIndex = 1;
+    var slideIndex2 = 1;
+            showDivs(slideIndex);
+            showDivs(slideIndex2);
+
+            function plusDivs(n) {
+                showDivs(slideIndex += n);
+                showDivs(slideIndex2 += n);
+            }
+
+            function setDivs(n){
+                showDivs(slideIndex = n);
+            }
+
+            function setDivs2(n){
+                showDivs(slideIndex2 = n);
+            }
+
+            function showDivs(n){
+                var i;
+                var x  = document.getElementsByClassName("image");
+                console.log(x);
+                if (n > x.length) {slideIndex = 1}
+                if (n < 1) {slideIndex = x.length};
+                for (i = 0; i < x.length; i++){
+                    x[i].style.display = "none";
+                }
+                x[slideIndex-1].style.display = "block";
+
+                var y  = document.getElementsByClassName("image-2");
+                console.log(y);
+                if (n > y.length) {slideIndex2 = 1}
+                if (n < 1) {slideIndex2 = y.length};
+                for (i = 0; i < y.length; i++){
+                    y[i].style.display = "none";
+                }
+                y[slideIndex2-1].style.display = "block";
+            }
+
+            setInterval(() => {
+                plusDivs(1);
+            }, 5000)
 </script>
 </html>
