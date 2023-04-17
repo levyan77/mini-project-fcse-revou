@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+}
+
+
+html{
+    user-select: none; /* Standard syntax */
+}
+
+
+.container{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 83px;
+}
+
+.container-nav{
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+}
+
+.container-nav > div > button{
+    /* padding: 10px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 15px;
+    color: black;
+    border: 1px solid;
+    background-color: white;
+}
+
+.container-nav > div > button {
+    transition-duration: 0.4s;
+}
+  
+.container-nav > div > button:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+}
+
+.menu{
+    font-size: 0px;
+}
+
+.icon_delete{
+    width: 30px;
+    height: 30px;
+}
+
+.table_person{
+    /* border: 5px solid black; */
+    border-collapse: collapse;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 5px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+input[type=text], input[type=date], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+.icon_delete{
+    width: 30px;
+    height: 30px;
+}
+.content{
+    flex-direction: row;
+    display: flex;
+    padding-top: 20px;
+}
+.content > div{
+    display: flex;
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+}
+.containertable {
+    border-radius: 5px;
+    background-color: white;
+    padding: 20px;
+}
+
+th{
+    background-color: lightgrey;
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 15px;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 15px;
+}
+
+@media only screen and (max-width: 1113px) {
+
+    .container{
+        padding-top: 192px;
+    }
+
+   .container-nav{
+    flex-direction: column;
+   }
+
+   .menu{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 99%;
+   }
+
+   .content{
+    flex-direction: column;
+   }
+
+   .col-25{
+    width: 40%;
+   }
+
+   .col-75{
+    width: 100%;
+   }
+
+   .col-jeniskelamin{
+    width: 103%;
+   }
+
+   .col-pesan{
+    width: 100%;
+   }
+
+   .table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #ddd;
+    }
+    .table-responsive > .table {
+        margin-bottom: 0;
+    }
+    .table-responsive > .table > thead > tr > th,
+    .table-responsive > .table > tbody > tr > th,
+    .table-responsive > .table > tfoot > tr > th,
+    .table-responsive > .table > thead > tr > td,
+    .table-responsive > .table > tbody > tr > td,
+    .table-responsive > .table > tfoot > tr > td {
+        white-space: nowrap;
+    }
+
+    .content > div{
+        display: block;
+    }
+
+}
